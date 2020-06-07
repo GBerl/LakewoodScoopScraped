@@ -1,0 +1,18 @@
+﻿@using LakewoodScoopScraped.Data
+@model List<Article>
+
+@foreach (Article article in Model)
+{
+    <div class="well col-md-6 col-md-offset-3">
+        <h2>
+            <a href="@article.TitleUrl" target="_blank">@article.Title</a>
+        </h2>
+        <div style="text-align:center">
+            <img src="@article.ImageUrl"width="500" />
+        </div>
+
+        @article.BlurbOfText
+
+        <p class="text-center">@article.Comments</p>
+    </div>
+}
